@@ -1,6 +1,10 @@
 <template>
-  <div>Hello {{ name }}</div>
-  <div v-text="channel"></div>
+  <div>
+    <div>Hello {{ name }}</div>
+    <div v-html="channel"></div>
+    <h2 v-bind:id="headingId">Heading</h2>
+    <button v-bind:disabled="isDisabled">Bind</button>
+  </div>
 </template>
 
 <script>
@@ -9,7 +13,9 @@ export default {
   data() {
     return {
       name: "Batman",
-      channel: "Codevolution",
+      channel: "<strong>Codevolution</strong>",
+      headingId: "heading",
+      isDisabled: true,
     };
   },
 }
