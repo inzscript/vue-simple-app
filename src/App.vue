@@ -24,12 +24,28 @@
       <h2 :style="headerStyleObject">Style Object</h2>
       <div :style="[baseStyleObject, successStyleObject]">Success Style</div>
       <div :style="[baseStyleObject, dangerStyleObject]">Danger Style</div>
+  
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Rendering msg="Conditional Rendering" />
+    <ListRendering msg="List Rendering" />
+
   </div>
 </template>
 
 <script>
+// import HelloWorld from './components/HelloWorld.vue'
+import Rendering from './components/ConditionalRendering.vue'
+import ListRendering from './components/ListRendering.vue'
+
 export default {
   name: 'App',
+  
+  components: {
+    Rendering,
+    ListRendering,
+    // HelloWorld,
+  },
+
   data() {
     return {
       name: "Batman",
